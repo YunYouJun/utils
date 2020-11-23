@@ -9,8 +9,9 @@
     "utils"
   ],
   "scripts": {
+    "docs:build": "typedoc --out docs src",
+    "docs:start": "cd docs && live-server",
     "build": "tsc",
-    "build:docs": "typedoc --out docs src",
     "prepublish": "yarn build",
     "lint": "eslint src --ext .ts --fix && prettier --write ."
   },
