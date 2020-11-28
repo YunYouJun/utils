@@ -1,11 +1,7 @@
 {
   "name": "@yunyoujun/utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/index.js",
-  "bin": {
-    "utils": "dist/index.js",
-    "yyj": "dist/index.js"
-  },
   "keywords": [
     "utils",
     "cli"
@@ -26,8 +22,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.21.0",
-    "commander": "^6.2.0"
+    "axios": "^0.21.0"
   },
   "devDependencies": {
     "@types/node": "^14.14.10",
