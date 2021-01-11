@@ -1,6 +1,6 @@
 {
   "name": "@yunyoujun/utils",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "dist/index.js",
   "keywords": [
     "utils",
@@ -22,7 +22,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.21.1"
+    "axios": "^0.21.1",
+    "chalk": "^4.1.0"
   },
   "devDependencies": {
     "@types/node": "^14.14.20",
