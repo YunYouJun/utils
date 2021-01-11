@@ -5,10 +5,12 @@
 
 import chalk from "chalk";
 
-type Color = "green" | "yellow" | "red" | "blue";
+type Color = "green" | "yellow" | "red" | "blue" | "cyan";
 interface ColorMap {
   [propName: string]: Color;
 }
+
+type Mode = "dev" | "prod";
 
 /**
  * 日志工具类
@@ -18,6 +20,10 @@ export default class Logger {
    * 启用
    */
   enable = true;
+  /**
+   * 当前模式，开发模式输出 Debug 信息
+   */
+  mode: Mode = "dev";
   constructor(public prefix = "") {}
 
   /**
@@ -33,6 +39,7 @@ export default class Logger {
       warning: "yellow",
       error: "red",
       info: "blue",
+      debug: "cyan",
     };
 
     const typeColor = color[type];
@@ -76,5 +83,15 @@ export default class Logger {
    */
   info(msg: any) {
     this.print("info", msg);
+  }
+
+  /**
+   * 输出 Debug 信息（cyan）
+   * @param msg
+   */
+  debug(msg: any) {
+    if (this.mode === "dev") {
+      this.print("debug", msg);
+    }
   }
 }
