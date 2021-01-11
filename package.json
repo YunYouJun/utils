@@ -7,7 +7,7 @@
     "cli"
   ],
   "scripts": {
-    "docs:build": "typedoc --out docs src",
+    "docs:build": "typedoc",
     "docs:start": "cd docs && live-server",
     "build": "tsc",
     "prepublishOnly": "yarn build",
