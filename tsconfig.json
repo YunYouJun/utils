@@ -4,12 +4,11 @@
     "baseUrl": ".",
     "outDir": "./dist",
     "target": "ESNext",
-    "module": "ESNext",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "lib": ["esnext", "dom"],
     "allowJs": true,
     "declaration": true,
-    "strict": true,
     "esModuleInterop": true,
 
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */,

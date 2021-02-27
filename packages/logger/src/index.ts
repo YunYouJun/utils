@@ -1,3 +1,3 @@
-import Logger from "./logger"
-export default Logger
-export {Logger}
+import Logger from "./logger";
+export default Logger;
+export { Logger };

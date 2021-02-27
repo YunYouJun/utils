@@ -1,6 +1,6 @@
 {
   "name": "@yunyoujun/utils",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "main": "dist/index.js",
   "keywords": [
     "utils",
@@ -20,8 +20,7 @@
   "homepage": "https://www.yunyoujun.cn/utils/",
   "license": "MIT",
   "dependencies": {
-    "@yunyoujun/logger": "^0.0.1",
+    "@yunyoujun/logger": "^0.0.2",
     "axios": "^0.21.1"
-  },
-  "devDependencies": {}
+  }
 }
