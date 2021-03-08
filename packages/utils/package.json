@@ -20,7 +20,7 @@
   "homepage": "https://www.yunyoujun.cn/utils/",
   "license": "MIT",
   "dependencies": {
-    "@yunyoujun/logger": "^0.0.2",
+    "@yunyoujun/logger": "^0.1.2",
     "axios": "^0.21.1"
   }
 }
