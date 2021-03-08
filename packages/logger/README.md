@@ -17,5 +17,5 @@ yarn add @yunyoujun/logger
 ```ts
 import { Logger } from "@yunyoujun/logger";
 const logger = new Logger();
-logger.success('Success!');
+logger.success("Success!");
 ```

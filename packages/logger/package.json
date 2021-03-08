@@ -1,10 +1,11 @@
 {
   "name": "@yunyoujun/logger",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn build",
+    "test": "ts-node test/index.ts"
   },
   "repository": "https://github.com/YunYouJun/utils",
   "author": {

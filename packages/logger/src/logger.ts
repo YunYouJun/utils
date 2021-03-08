@@ -4,6 +4,7 @@
  */
 
 import chalk from "chalk";
+import { defaultOptions, LoggerOptions } from "./options";
 
 type Color = "green" | "yellow" | "red" | "blue" | "cyan";
 interface ColorMap {
@@ -24,7 +25,10 @@ export default class Logger {
    * 当前模式，开发模式输出 Debug 信息
    */
   mode: Mode = "dev";
-  constructor(public prefix = "") {}
+
+  constructor(public options?: Partial<LoggerOptions>) {
+    this.options = Object.assign(defaultOptions, options);
+  }
 
   /**
    * 打印消息
@@ -44,10 +48,17 @@ export default class Logger {
 
     const typeColor = color[type];
     const typeName = `[${type}]`;
-    const content = [chalk[typeColor as Color](typeName), msg];
+    const content = [];
 
-    if (this.prefix) {
-      content.unshift(this.prefix);
+    if (this.options.prefix) {
+      content.push(this.options.prefix);
+    }
+
+    if (this.options.type) {
+      content.push(chalk[typeColor as Color](typeName));
+      content.push(msg);
+    } else {
+      content.push(chalk[typeColor as Color](msg));
     }
 
     console.log(...content);

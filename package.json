@@ -13,7 +13,7 @@
     "docs:serve": "cd docs && live-server",
     "build": "yarn workspaces run build",
     "prepublishOnly": "yarn build",
-    "lint": "eslint src --ext .ts --fix && prettier --write .",
+    "lint": "eslint . --ext .ts --fix && prettier --write .",
     "release": "ts-node-script scripts/release.ts",
     "test": "node -r ts-node/register src/index.ts"
   },
