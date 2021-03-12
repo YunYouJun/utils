@@ -1,5 +1,7 @@
 # logger
 
+[![npm (scoped)](https://img.shields.io/npm/v/@yunyoujun/logger)](https://www.npmjs.com/package/@yunyoujun/logger)
+
 简单的彩色日志输出
 
 - `success`: 绿色

@@ -20,3 +20,11 @@ import * as yyj from "@yunyoujun/utils";
 // 休眠一秒
 yyj.common.sleep(1000);
 ```
+
+## Packages
+
+### @yunyoujun/logger
+
+| Name                                   | Version                                                                                                            | Description    |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | -------------- |
+| [@yunyoujun/logger](./packages/logger) | [![npm (scoped)](https://img.shields.io/npm/v/@yunyoujun/logger)](https://www.npmjs.com/package/@yunyoujun/logger) | 简单的日志工具 |
