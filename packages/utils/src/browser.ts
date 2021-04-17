@@ -10,14 +10,14 @@
  */
 export function debounce(fn: Function, delay = 200) {
   let timer = null;
-  return () => {
+  return (...args) => {
     if (timer) {
       clearTimeout(timer);
       timer = null;
     }
 
     timer = setTimeout(() => {
-      fn();
+      fn(...args);
     }, delay);
   };
 }
@@ -29,12 +29,13 @@ export function debounce(fn: Function, delay = 200) {
  */
 export function throttle(fn: Function, threshold = 200) {
   // 第一次立即执行
-  let last = 0;
-  return () => {
-    const now = Date.now();
-    if (now - last > threshold) {
-      fn();
-      last = now;
+  let timer;
+  return (...args) => {
+    if (!timer) {
+      timer = setTimeout(() => {
+        fn(...args);
+        timer = null;
+      }, threshold);
     }
   };
 }
