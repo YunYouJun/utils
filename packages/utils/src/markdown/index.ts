@@ -1,4 +1,4 @@
-import { logger } from "./logger";
+import { logger } from "../logger";
 
 /**
  * 在标签间插入内容
