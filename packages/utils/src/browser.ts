@@ -10,7 +10,7 @@
  */
 export function debounce(fn: Function, delay = 200) {
   let timer = null;
-  return (...args) => {
+  return (...args: any) => {
     if (timer) {
       clearTimeout(timer);
       timer = null;
@@ -30,7 +30,7 @@ export function debounce(fn: Function, delay = 200) {
 export function throttle(fn: Function, threshold = 200) {
   // 第一次立即执行
   let timer;
-  return (...args) => {
+  return (...args: any) => {
     if (!timer) {
       timer = setTimeout(() => {
         fn(...args);

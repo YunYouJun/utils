@@ -7,7 +7,7 @@ import { logger } from "./logger";
  * @param injectedContent 被插入的内容
  * @returns
  */
-function injectContentBetweenTags(
+export function injectContentBetweenTags(
   namespace: string,
   content: string,
   injectedContent: string
