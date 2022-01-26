@@ -3,15 +3,14 @@
  * @packageDocumentation
  */
 
-import chalk from "chalk";
-import { defaultOptions, LoggerOptions } from "./options";
+import chalk from 'chalk'
+import type { LoggerOptions } from './options'
+import { defaultOptions } from './options'
 
-type Color = "green" | "yellow" | "red" | "blue" | "cyan";
-interface ColorMap {
-  [propName: string]: Color;
-}
+type Color = 'green' | 'yellow' | 'red' | 'blue' | 'cyan'
+type ColorMap = Record<string, Color>
 
-type Mode = "dev" | "prod";
+type Mode = 'dev' | 'prod'
 
 /**
  * 日志工具类
@@ -20,14 +19,14 @@ export default class Logger {
   /**
    * 启用
    */
-  enable = true;
+  enable = true
   /**
    * 当前模式，开发模式输出 Debug 信息
    */
-  mode: Mode = "dev";
+  mode: Mode = 'dev'
 
   constructor(public options?: Partial<LoggerOptions>) {
-    this.options = Object.assign(defaultOptions, options);
+    this.options = Object.assign(defaultOptions, options)
   }
 
   /**
@@ -36,32 +35,33 @@ export default class Logger {
    * @param msg 消息
    */
   print(type: string, msg: any) {
-    if (!this.enable) return;
+    if (!this.enable) return
 
     const color: ColorMap = {
-      success: "green",
-      warning: "yellow",
-      error: "red",
-      info: "blue",
-      debug: "cyan",
-    };
-
-    const typeColor = color[type];
-    const typeName = `[${type}]`;
-    const content = [];
-
-    if (this.options.prefix) {
-      content.push(this.options.prefix);
+      success: 'green',
+      warning: 'yellow',
+      error: 'red',
+      info: 'blue',
+      debug: 'cyan',
     }
+
+    const typeColor = color[type]
+    const typeName = `[${type}]`
+    const content = []
+
+    if (this.options.prefix)
+      content.push(this.options.prefix)
 
     if (this.options.type) {
-      content.push(chalk[typeColor as Color](typeName));
-      content.push(msg);
-    } else {
-      content.push(chalk[typeColor as Color](msg));
+      content.push(chalk[typeColor as Color](typeName))
+      content.push(msg)
+    }
+    else {
+      content.push(chalk[typeColor as Color](msg))
     }
 
-    console.log(...content);
+    // eslint-disable-next-line no-console
+    console.log(...content)
   }
 
   /**
@@ -69,7 +69,7 @@ export default class Logger {
    * @param msg 文本
    */
   success(msg: any) {
-    this.print("success", msg);
+    this.print('success', msg)
   }
 
   /**
@@ -77,7 +77,7 @@ export default class Logger {
    * @param msg 文本
    */
   warning(msg: any) {
-    this.print("warning", msg);
+    this.print('warning', msg)
   }
 
   /**
@@ -85,7 +85,7 @@ export default class Logger {
    * @param msg 文本
    */
   error(msg: any) {
-    this.print("error", msg);
+    this.print('error', msg)
   }
 
   /**
@@ -93,7 +93,7 @@ export default class Logger {
    * @param msg 文本
    */
   info(msg: any) {
-    this.print("info", msg);
+    this.print('info', msg)
   }
 
   /**
@@ -101,8 +101,7 @@ export default class Logger {
    * @param msg
    */
   debug(msg: any) {
-    if (this.mode === "dev") {
-      this.print("debug", msg);
-    }
+    if (this.mode === 'dev')
+      this.print('debug', msg)
   }
 }

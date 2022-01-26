@@ -1,2 +1,2 @@
-import { Logger } from "@yunyoujun/logger";
-export const logger = new Logger();
+import { Logger } from '@yunyoujun/logger'
+export const logger = new Logger()

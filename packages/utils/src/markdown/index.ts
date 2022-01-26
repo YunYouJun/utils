@@ -1,4 +1,4 @@
-import { logger } from "../logger";
+import { logger } from '../logger'
 
 /**
  * 在标签间插入内容
@@ -10,25 +10,25 @@ import { logger } from "../logger";
 export function injectContentBetweenTags(
   namespace: string,
   content: string,
-  injectedContent: string
+  injectedContent: string,
 ) {
-  const startTag = `<!-- ${namespace}:start -->`;
-  const endTag = `<!-- ${namespace}:end -->`;
+  const startTag = `<!-- ${namespace}:start -->`
+  const endTag = `<!-- ${namespace}:end -->`
 
-  const startIndex = content.indexOf(startTag);
-  const endIndex = content.indexOf(endTag, startIndex);
+  const startIndex = content.indexOf(startTag)
+  const endIndex = content.indexOf(endTag, startIndex)
 
   if (startIndex === -1 || endIndex === -1) {
-    logger.warning(`Can not find ${startTag} and ${endTag}.`);
-    return "";
+    logger.warning(`Can not find ${startTag} and ${endTag}.`)
+    return ''
   }
   return [
     content.slice(0, startIndex + startTag.length),
-    "\n<!-- prettier-ignore-start -->",
-    "\n<!-- markdownlint-disable -->\n",
+    '\n<!-- prettier-ignore-start -->',
+    '\n<!-- markdownlint-disable -->\n',
     injectedContent,
-    "\n<!-- markdownlint-restore -->",
-    "\n<!-- prettier-ignore-end -->\n",
+    '\n<!-- markdownlint-restore -->',
+    '\n<!-- prettier-ignore-end -->\n',
     content.slice(endIndex),
-  ].join("");
+  ].join('')
 }

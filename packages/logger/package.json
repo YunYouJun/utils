@@ -1,10 +1,10 @@
 {
   "name": "@yunyoujun/logger",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "main": "dist/index.js",
+  "type": "module",
   "scripts": {
-    "build": "yarn clean && tsc",
-    "clean": "rm -rf dist",
+    "build": "tsup",
     "prepublishOnly": "yarn build",
     "test": "ts-node test/index.ts"
   },
@@ -17,6 +17,6 @@
   "homepage": "https://www.yunyoujun.cn/utils/",
   "license": "MIT",
   "dependencies": {
-    "chalk": "^4.1.0"
+    "chalk": "^5.0.0"
   }
 }

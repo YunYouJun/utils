@@ -2,14 +2,14 @@ export interface LoggerOptions {
   /**
    * 前缀
    */
-  prefix: string;
+  prefix: string
   /**
    * 是否显示类型
    */
-  type: boolean;
+  type: boolean
 }
 
 export const defaultOptions = {
-  prefix: "",
+  prefix: '',
   type: true,
-};
+}

@@ -1,5 +1,5 @@
-import fs from "fs";
-import axios from "axios";
+import fs from 'fs'
+import axios from 'axios'
 
 /**
  * 下载文件
@@ -9,10 +9,12 @@ import axios from "axios";
 export async function downloadFile(url: string, path: string) {
   try {
     const res = await axios.get(url, {
-      responseType: "arraybuffer",
-    });
-    fs.writeFileSync(path, res.data, "binary");
-  } catch (err) {
-    console.log(err.message);
+      responseType: 'arraybuffer',
+    })
+    fs.writeFileSync(path, res.data, 'binary')
+  }
+  catch (err) {
+    // eslint-disable-next-line no-console
+    console.log(err.message)
   }
 }

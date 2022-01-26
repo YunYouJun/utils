@@ -9,17 +9,17 @@
  * @param delay ms 延迟执行时间
  */
 export function debounce(fn: Function, delay = 200) {
-  let timer = null;
+  let timer = null
   return (...args: any) => {
     if (timer) {
-      clearTimeout(timer);
-      timer = null;
+      clearTimeout(timer)
+      timer = null
     }
 
     timer = setTimeout(() => {
-      fn(...args);
-    }, delay);
-  };
+      fn(...args)
+    }, delay)
+  }
 }
 
 /**
@@ -29,15 +29,15 @@ export function debounce(fn: Function, delay = 200) {
  */
 export function throttle(fn: Function, threshold = 200) {
   // 第一次立即执行
-  let timer;
+  let timer
   return (...args: any) => {
     if (!timer) {
       timer = setTimeout(() => {
-        fn(...args);
-        timer = null;
-      }, threshold);
+        fn(...args)
+        timer = null
+      }, threshold)
     }
-  };
+  }
 }
 
 /**
@@ -47,12 +47,13 @@ export function throttle(fn: Function, threshold = 200) {
  * @param color 颜色
  */
 export function consoleInfo(name: string, link: string, color?: string) {
-  if (!color) {
-    color = "#0078E7";
-  }
+  if (!color)
+    color = '#0078E7'
+
+  // eslint-disable-next-line no-console
   console.log(
     `%c ☁️ ${name} %c ${link}`,
     `color: white; background: ${color}; padding:5px 0;`,
-    `padding:4px;border:1px solid ${color};`
-  );
+    `padding:4px;border:1px solid ${color};`,
+  )
 }

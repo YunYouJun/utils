@@ -1,16 +1,16 @@
 {
   "name": "@yunyoujun/utils",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "main": "dist/index.js",
+  "type": "module",
   "keywords": [
     "utils",
     "cli",
     "logger"
   ],
   "scripts": {
-    "clean": "rm -rf dist",
-    "build": "yarn clean && tsc",
-    "prepublishOnly": "yarn build"
+    "build": "tsup",
+    "prepublishOnly": "npm run build"
   },
   "repository": "https://github.com/YunYouJun/utils",
   "author": {
@@ -21,7 +21,7 @@
   "homepage": "https://www.yunyoujun.cn/utils/",
   "license": "MIT",
   "dependencies": {
-    "@yunyoujun/logger": "^0.1.2",
-    "axios": "^0.21.1"
+    "@yunyoujun/logger": "workspace:*",
+    "axios": "^0.25.0"
   }
 }
