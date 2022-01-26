@@ -4,6 +4,6 @@ export default defineConfig({
   entry: ['src/**/*.ts'],
   clean: true,
   outDir: 'dist',
-  format: ['esm'],
+  format: ['cjs', 'esm'],
   minify: true,
 })
