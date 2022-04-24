@@ -1,0 +1,9 @@
+:root {
+  --el-test: black;
+  --el-bg: white;
+}
+
+.text {
+  color: var(--el-test);
+  background-color: var(--el-bg);
+}

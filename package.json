@@ -1,5 +1,6 @@
 {
   "private": true,
+  "name": "@yunyoujun/utils",
   "keywords": [
     "utils",
     "cli"
@@ -25,20 +26,22 @@
   "homepage": "https://www.yunyoujun.cn/utils/",
   "license": "MIT",
   "devDependencies": {
-    "@antfu/eslint-config": "^0.16.0",
+    "@antfu/eslint-config": "^0.20.7",
     "@types/minimist": "^1.2.2",
-    "@types/node": "^17.0.12",
+    "@types/node": "^17.0.25",
     "@types/semver": "^7.3.9",
-    "eslint": "^8.7.0",
+    "eslint": "^8.14.0",
+    "fast-glob": "^3.2.11",
     "husky": "^7.0.4",
-    "lint-staged": "^12.3.1",
-    "minimist": "^1.2.5",
+    "lint-staged": "^12.4.0",
+    "minimist": "^1.2.6",
     "npm-run-all": "^4.1.5",
-    "semver": "^7.3.5",
-    "ts-node": "^10.4.0",
-    "tsup": "^5.11.11",
-    "typedoc": "^0.22.11",
-    "typescript": "^4.5.5"
+    "semver": "^7.3.7",
+    "ts-node": "^10.7.0",
+    "tsup": "^5.12.6",
+    "typedoc": "^0.22.15",
+    "typescript": "^4.6.3",
+    "vitest": "^0.9.4"
   },
   "lint-staged": {
     "*.ts": [

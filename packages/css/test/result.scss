@@ -1,0 +1,9 @@
+:root {
+  --el-test: black;
+  --el-bg: white;
+}
+
+.text {
+  color: getCssVar('test');
+  background-color: getCssVar('bg');
+}

@@ -1,0 +1,6 @@
+{
+  "name": "@yunyoujun/css",
+  "scripts": {
+    "test": "vitest"
+  }
+}
