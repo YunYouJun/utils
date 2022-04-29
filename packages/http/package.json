@@ -1,13 +1,12 @@
 {
-  "name": "@yunyoujun/utils",
+  "name": "@yunyoujun/http",
   "version": "0.2.3",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "index.d.ts",
   "keywords": [
     "utils",
-    "cli",
-    "logger"
+    "http"
   ],
   "exports": {
     ".": {
@@ -29,6 +28,6 @@
   "homepage": "https://www.yunyoujun.cn/utils/",
   "license": "MIT",
   "dependencies": {
-    "@yunyoujun/logger": "workspace:*"
+    "axios": "^0.26.1"
   }
 }

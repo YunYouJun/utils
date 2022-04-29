@@ -8,9 +8,7 @@
   "scripts": {
     "docs:build": "typedoc",
     "docs:serve": "cd docs && live-server",
-    "build": "run-s build:logger build:utils",
-    "build:logger": "cd packages/logger && npm run build",
-    "build:utils": "cd packages/utils && npm run build",
+    "build": "pnpm run -r build",
     "prepublishOnly": "yarn build",
     "lint": "eslint \"**/*.{ts,js}\" --fix",
     "release": "ts-node-script scripts/release.ts",
@@ -30,6 +28,7 @@
     "@types/minimist": "^1.2.2",
     "@types/node": "^17.0.30",
     "@types/semver": "^7.3.9",
+    "@yunyoujun/logger": "workspace:*",
     "consola": "^2.15.3",
     "enquirer": "^2.3.6",
     "eslint": "^8.14.0",
@@ -50,5 +49,5 @@
       "eslint --fix"
     ]
   },
-  "version": "0.2.1"
+  "version": "0.2.3"
 }
