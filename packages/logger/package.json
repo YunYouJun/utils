@@ -2,11 +2,10 @@
   "name": "@yunyoujun/logger",
   "version": "0.2.1",
   "main": "dist/index.js",
-  "type": "module",
   "exports": {
     ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js"
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
     }
   },
   "scripts": {

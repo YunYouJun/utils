@@ -2,5 +2,6 @@
   "name": "@yunyoujun/css",
   "scripts": {
     "test": "vitest"
-  }
+  },
+  "version": "0.2.1"
 }

@@ -14,14 +14,23 @@ yarn add @yunyoujun/utils
 ```
 
 ```js
-import * as yyj from "@yunyoujun/utils";
+import * as yyj from '@yunyoujun/utils'
 
 // example
 // 休眠一秒
-yyj.common.sleep(1000);
+yyj.common.sleep(1000)
 ```
 
 ## Packages
+
+More info see [packages](./packages/).
+
+## Dev
+
+```bash
+# release
+pnpm release
+```
 
 ### @yunyoujun/logger
 
