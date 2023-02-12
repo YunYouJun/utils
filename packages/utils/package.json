@@ -1,9 +1,14 @@
 {
   "name": "@yunyoujun/utils",
-  "version": "0.3.0",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "index.d.ts",
+  "version": "0.3.1",
+  "author": {
+    "email": "me@yunyoujun.cn",
+    "name": "YunYouJun",
+    "url": "https://www.yunyoujun.cn"
+  },
+  "license": "MIT",
+  "homepage": "https://www.yunyoujun.cn/utils/",
+  "repository": "https://github.com/YunYouJun/utils",
   "keywords": [
     "utils",
     "cli",
@@ -11,23 +16,21 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
+      "types": "./index.d.ts",
       "require": "./dist/index.js",
-      "types": "./index.d.ts"
+      "import": "./dist/index.mjs"
     }
   },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "tsup",
+    "build": "unbuild",
     "prepublishOnly": "npm run build"
   },
-  "repository": "https://github.com/YunYouJun/utils",
-  "author": {
-    "email": "me@yunyoujun.cn",
-    "name": "YunYouJun",
-    "url": "https://www.yunyoujun.cn"
-  },
-  "homepage": "https://www.yunyoujun.cn/utils/",
-  "license": "MIT",
   "dependencies": {
     "@yunyoujun/logger": "workspace:*"
   }

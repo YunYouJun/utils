@@ -1,26 +1,26 @@
 {
   "name": "@yunyoujun/logger",
-  "version": "0.3.0",
-  "main": "dist/index.js",
+  "version": "0.3.1",
+  "author": {
+    "email": "me@yunyoujun.cn",
+    "name": "YunYouJun",
+    "url": "https://www.yunyoujun.cn"
+  },
+  "license": "MIT",
+  "homepage": "https://www.yunyoujun.cn/utils/",
+  "repository": "https://github.com/YunYouJun/utils",
   "exports": {
     ".": {
       "require": "./dist/index.js",
       "import": "./dist/index.mjs"
     }
   },
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsup",
     "prepublishOnly": "npm run build",
-    "test": "ts-node test/index.ts"
+    "test": "tsx test/index.ts"
   },
-  "repository": "https://github.com/YunYouJun/utils",
-  "author": {
-    "email": "me@yunyoujun.cn",
-    "name": "YunYouJun",
-    "url": "https://www.yunyoujun.cn"
-  },
-  "homepage": "https://www.yunyoujun.cn/utils/",
-  "license": "MIT",
   "dependencies": {
     "chalk": "4"
   }

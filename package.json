@@ -1,6 +1,16 @@
 {
-  "private": true,
   "name": "@yunyoujun/utils",
+  "version": "0.3.1",
+  "private": true,
+  "packageManager": "pnpm@7.27.0",
+  "author": {
+    "email": "me@yunyoujun.cn",
+    "name": "YunYouJun",
+    "url": "https://www.yunyoujun.cn"
+  },
+  "license": "MIT",
+  "homepage": "https://www.yunyoujun.cn/utils/",
+  "repository": "https://github.com/YunYouJun/utils",
   "keywords": [
     "utils",
     "cli"
@@ -10,46 +20,37 @@
     "docs:serve": "cd docs && live-server",
     "build": "pnpm run -r build",
     "prepublishOnly": "npm run build",
-    "lint": "eslint \"**/*.{ts,js}\" --fix",
-    "release": "tsx scripts/release.ts",
-    "test": "node -r ts-node/register src/index.ts",
-    "prepare": "husky install"
+    "lint": "eslint .",
+    "release": "bumpp package.json packages/*/package.json --all -x \"tsx scripts/release.ts\"",
+    "test": "vitest",
+    "prepare": "husky install",
+    "typecheck": "tsc --noEmit"
   },
-  "repository": "https://github.com/YunYouJun/utils",
-  "author": {
-    "email": "me@yunyoujun.cn",
-    "name": "YunYouJun",
-    "url": "https://www.yunyoujun.cn"
-  },
-  "homepage": "https://www.yunyoujun.cn/utils/",
-  "license": "MIT",
   "devDependencies": {
     "@antfu/eslint-config": "^0.35.2",
-    "@types/minimist": "^1.2.2",
     "@types/node": "^18.13.0",
     "@types/semver": "^7.3.9",
     "@yunyoujun/logger": "workspace:*",
+    "bumpp": "^8.2.1",
     "consola": "^2.15.3",
     "enquirer": "^2.3.6",
     "eslint": "^8.14.0",
     "execa": "^5.1.1",
     "fast-glob": "^3.2.11",
+    "fs-extra": "^11.1.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.1",
-    "minimist": "^1.2.6",
     "npm-run-all": "^4.1.5",
-    "semver": "^7.3.7",
-    "ts-node": "^10.7.0",
     "tsup": "^6.6.2",
     "tsx": "^3.12.3",
     "typedoc": "^0.23.25",
     "typescript": "^4.6.4",
-    "vitest": "^0.28.4"
+    "vitest": "^0.28.4",
+    "zx": "^7.1.1"
   },
   "lint-staged": {
     "*.ts": [
       "eslint --fix"
     ]
-  },
-  "version": "0.3.0"
+  }
 }

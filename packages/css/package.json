@@ -1,7 +1,7 @@
 {
   "name": "@yunyoujun/css",
+  "version": "0.3.1",
   "scripts": {
     "test": "vitest"
-  },
-  "version": "0.3.0"
+  }
 }
