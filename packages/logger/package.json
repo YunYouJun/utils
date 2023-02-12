@@ -1,6 +1,6 @@
 {
   "name": "@yunyoujun/logger",
-  "version": "0.2.3",
+  "version": "0.2.9",
   "main": "dist/index.js",
   "exports": {
     ".": {
@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "tsup",
-    "prepublishOnly": "yarn build",
+    "prepublishOnly": "npm run build",
     "test": "ts-node test/index.ts"
   },
   "repository": "https://github.com/YunYouJun/utils",

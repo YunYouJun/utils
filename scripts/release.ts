@@ -82,7 +82,7 @@ async function main() {
 
   // build packages
   consola.debug('Building all packages...')
-  await run('yarn', ['build'])
+  await run('npm', ['run', 'build'])
 
   // publish package
   console.log()

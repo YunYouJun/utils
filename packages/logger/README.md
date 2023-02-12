@@ -13,11 +13,11 @@
 ## Usage
 
 ```sh
-yarn add @yunyoujun/logger
+pnpm add @yunyoujun/logger
 ```
 
 ```ts
-import { Logger } from "@yunyoujun/logger";
-const logger = new Logger();
-logger.success("Success!");
+import { Logger } from '@yunyoujun/logger'
+const logger = new Logger()
+logger.success('Success!')
 ```
