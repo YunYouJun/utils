@@ -1,5 +1,6 @@
 /**
- * 通用小工具
+ * @en Common Utils
+ * @zh 通用小工具
  * @packageDocumentation
  */
 

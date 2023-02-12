@@ -15,7 +15,7 @@ type Mode = 'dev' | 'prod'
 /**
  * 日志工具类
  */
-export default class Logger {
+export class Logger {
   /**
    * 启用
    */
@@ -35,7 +35,8 @@ export default class Logger {
    * @param msg 消息
    */
   print(type: string, msg: any) {
-    if (!this.enable) return
+    if (!this.enable)
+      return
 
     const color: ColorMap = {
       success: 'green',
