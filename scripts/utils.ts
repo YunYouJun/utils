@@ -25,7 +25,7 @@ export async function publishPackage(pkgName: string, version: string) {
     await $`npx pnpm -r publish --access public --no-git-checks`
     consola.success(`Successfully published ${pkgName}@${version}`)
   }
-  catch (e) {
+  catch (e: any) {
     if (e.stderr.match(/previously published/))
       consola.error(`Skipping already published: ${pkgName}`)
 

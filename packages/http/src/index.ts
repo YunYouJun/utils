@@ -13,7 +13,7 @@ export async function downloadFile(url: string, path: string) {
     })
     fs.writeFileSync(path, res.data, 'binary')
   }
-  catch (err) {
+  catch (err: any) {
     // eslint-disable-next-line no-console
     console.log(err.message)
   }

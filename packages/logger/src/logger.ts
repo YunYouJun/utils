@@ -25,7 +25,9 @@ export class Logger {
    */
   mode: Mode = 'dev'
 
-  constructor(public options?: Partial<LoggerOptions>) {
+  options: Partial<LoggerOptions>
+
+  constructor(options: Partial<LoggerOptions> = {}) {
     this.options = Object.assign(defaultOptions, options)
   }
 

@@ -9,7 +9,7 @@
  * @param delay ms 延迟执行时间
  */
 export function debounce(fn: Function, delay = 200) {
-  let timer: ReturnType<typeof setTimeout> = null
+  let timer: ReturnType<typeof setTimeout> | null
   return (...args: any) => {
     if (timer) {
       clearTimeout(timer)
@@ -29,7 +29,7 @@ export function debounce(fn: Function, delay = 200) {
  */
 export function throttle(fn: Function, threshold = 200) {
   // 第一次立即执行
-  let timer: ReturnType<typeof setTimeout> = null
+  let timer: ReturnType<typeof setTimeout> | null
   return (...args: any) => {
     if (!timer) {
       timer = setTimeout(() => {
