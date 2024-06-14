@@ -11,7 +11,9 @@
     },
     "resolveJsonModule": true,
     "types": [
-      "node"
+      "node",
+      "vitest",
+      "vitest/globals"
     ],
     "allowJs": true,
     "strict": true,
