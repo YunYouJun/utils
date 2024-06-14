@@ -23,7 +23,8 @@
     "prepublishOnly": "npm run build",
     "lint": "eslint .",
     "release": "bumpp package.json packages/*/package.json --all -x \"tsx scripts/release.ts\"",
-    "test": "vitest --typecheck",
+    "test:unit": "vitest --typecheck",
+    "test": "npm run test",
     "prepare": "husky install",
     "typecheck": "tsc --noEmit"
   },
