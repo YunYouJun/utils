@@ -1,17 +1,17 @@
-import path from 'path'
-import fs from 'fs'
+import path from 'node:path'
+import fs from 'node:fs'
 import consola from 'consola'
 import { $ } from 'zx'
 
-export const getPkgRoot = (pkg: string) =>
-  path.resolve(__dirname, `../packages/${pkg}`)
+export function getPkgRoot(pkg: string) {
+  return path.resolve(__dirname, `../packages/${pkg}`)
+}
 
 /**
  * publish packages
  * if you want to publish when local
  * @param pkgName
  * @param version
- * @returns
  */
 export async function publishPackage(pkgName: string, version: string) {
   const pkgRoot = getPkgRoot(pkgName)

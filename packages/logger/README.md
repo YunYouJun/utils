@@ -21,3 +21,7 @@ import { Logger } from '@yunyoujun/logger'
 const logger = new Logger()
 logger.success('Success!')
 ```
+
+## Ref
+
+If you want more features, you can use [consola](https://npmjs.com/package/consola).

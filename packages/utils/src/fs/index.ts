@@ -1,5 +1,6 @@
-import fs from 'fs'
-import { resolve } from 'path'
+import fs from 'node:fs'
+import { resolve } from 'node:path'
+import process from 'node:process'
 
 /**
  * 检查文件夹是否存在，若不存在则新建

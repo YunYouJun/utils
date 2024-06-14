@@ -12,7 +12,6 @@ export function getCssVar(str: string, namespace = '') {
  * var(--el-test) to getCssVar('test')
  * @param str
  * @param namespace
- * @returns
  */
 export function replaceCssVar(str: string, namespace = 'el') {
   const varRe = /\svar\(--(.*?)\)/g

@@ -1,26 +1,26 @@
 {
   "compilerOptions": {
+    "target": "es2018",
+    "lib": ["esnext"],
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
     "baseUrl": ".",
-    "outDir": "./dist",
-    "target": "es2018",
     "module": "esnext",
-    "lib": ["esnext"],
     "moduleResolution": "node",
-    "allowJs": true,
-    "strict": true,
-    "strictNullChecks": true,
+    "paths": {
+      "@yunyoujun/*": ["packages/*/src"]
+    },
     "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    "declaration": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */,
     "types": [
       "node"
     ],
-    "paths": {
-      "@yunyoujun/*": ["packages/*/src"]
-    }
+    "allowJs": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "declaration": true,
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true /* Disallow inconsistently-cased references to the same file. */
   }
 }

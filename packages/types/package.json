@@ -1,0 +1,12 @@
+{
+  "name": "@yunyoujun/types",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "unbuild",
+    "prepublishOnly": "npm run build",
+    "release": "bumpp && npm publish"
+  }
+}

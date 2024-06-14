@@ -1,4 +1,4 @@
-import path from 'path'
+import path from 'node:path'
 import fs from 'fs-extra'
 
 import consola from 'consola'
@@ -59,7 +59,7 @@ function updateDeps(pkg: any, depType: string, version: string) {
     if (
       dep === pkgName
       || (dep.startsWith(`@${pkgName}`)
-        && packages.includes(dep.replace(`@${pkgName}`, '')))
+      && packages.includes(dep.replace(`@${pkgName}`, '')))
     ) {
       consola.warn(`${pkg.name} -> ${depType} -> ${dep}@${version}`)
       deps[dep] = version
